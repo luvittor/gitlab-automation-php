@@ -1,0 +1,12 @@
+{
+  "name": "luvittor/php-gitlab-automation",
+  "require": {
+    "guzzlehttp/guzzle": "^7.0",
+    "vlucas/phpdotenv": "^5.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "GitLabAutomation\\": "src/"
+    }
+  }
+}

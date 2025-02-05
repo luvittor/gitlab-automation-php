@@ -1,0 +1,4 @@
+vendor
+.env
+tasks/*.txt
+private_notes.md
