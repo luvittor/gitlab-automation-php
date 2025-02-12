@@ -28,10 +28,17 @@ foreach ($repos as $repo) {
     
     // To master
     $content .= "MR {$baseUrl}/tree/task/{$taskId} {$baseUrl}/tree/master\n";
+
+}
+
+$content .= "\n";
+
+foreach ($repos as $repo) {
+    $baseUrl = rtrim($_ENV['GITLAB_URL'], '/') . '/' . ltrim($repo, '/');
+    
     // To GMUD release
     $content .= "MR {$baseUrl}/tree/task/{$taskId} {$baseUrl}/tree/release/gmud-{$gmudNumber}\n";
 
-    $content .= "\n";
 }
 
 file_put_contents($outputFile, trim($content));

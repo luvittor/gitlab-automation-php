@@ -3,7 +3,7 @@
 require __DIR__ . '/src/header.php';
 
 if ($argc < 2) {
-    die("Usage: php create_txt_for_gmuds_mrs.php <gmud_number>\n");
+    die("Usage: php create_txt_for_gmud_mrs.php <gmud_number>\n");
 }
 
 $gmudNumber = $argv[1];
