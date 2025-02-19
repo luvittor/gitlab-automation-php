@@ -47,8 +47,8 @@ php create_txt_for_gmud_branches.php 1234
 php create_txt_for_gmuds_mrs.php 1234
 
 # Execute operations
-php batch_branches.php tasks/create_gmud_1234_branches.txt
-php batch_mrs.php tasks/create_gmud_1234_mrs.txt
+php gitlab.php tasks/create_gmud_1234_branches.txt
+php gitlab.php tasks/create_gmud_1234_mrs.txt
 ```
 
 ### 2. Task MR Generation
@@ -57,7 +57,7 @@ php batch_mrs.php tasks/create_gmud_1234_mrs.txt
 php create_txt_for_task_mrs_for_gmud.php glpi-654321 1234 b2b/api-b2b mob/backend/portal_b2b_api
 
 # Execute MR creation
-php batch_mrs.php tasks/create_task_glpi-654321_mrs_to_gmud_1234.txt
+php gitlab.php tasks/create_task_glpi-654321_mrs_to_gmud_1234.txt
 ```
 
 ## Script Reference
@@ -91,7 +91,6 @@ php batch_mrs.php tasks/create_task_glpi-654321_mrs_to_gmud_1234.txt
 | Invalid GMUD number | Use numeric values only |
 | Missing repos | Verify `.env` REPOS configuration |
 | API errors | Check token permissions<br>Validate GitLab URLs |
-| File permissions | `chmod +x *.php` |
 
 **Note**  
  - Test with non-critical branches first.

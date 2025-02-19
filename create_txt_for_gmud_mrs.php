@@ -20,7 +20,13 @@ foreach ($repos as $repo) {
     $baseUrl = rtrim($_ENV['GITLAB_URL'], '/') . '/' . trim($repo, '/');
 
     $content .= "MR {$baseUrl}/tree/release/gmud-{$gmudNumber} {$baseUrl}/tree/gmud/{$gmudNumber}\n";
-    $content .= "MR {$baseUrl}/tree/gmud/{$gmudNumber} {$baseUrl}/tree/master\n\n";
+}
+
+$content .= "\n";
+foreach ($repos as $repo) {
+    $baseUrl = rtrim($_ENV['GITLAB_URL'], '/') . '/' . trim($repo, '/');
+
+    $content .= "MR {$baseUrl}/tree/gmud/{$gmudNumber} {$baseUrl}/tree/master\n";
 }
 
 file_put_contents($outputFile, trim($content));
