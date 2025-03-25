@@ -41,10 +41,10 @@ Edit `.env`.
 ### 1. GMUD Preparation
 ```bash
 # Generate branch creation tasks
-php create_txt_for_gmud_branches.php 1234
+php gmud_branches_txt.php 1234
 
 # Generate MR tasks between branches
-php create_txt_for_gmuds_mrs.php 1234
+php gmuds_mrs_txt.php 1234
 
 # Execute operations
 php gitlab.php tasks/create_gmud_1234_branches.txt
@@ -54,7 +54,7 @@ php gitlab.php tasks/create_gmud_1234_mrs.txt
 ### 2. Task MR Generation
 ```bash
 # Generate task MRs for specific repos
-php create_txt_for_task_mrs_for_gmud.php glpi-654321 1234 b2b/api-b2b mob/backend/portal_b2b_api
+php task_mrs_for_gmud_txt.php glpi-654321 1234 b2b/api-b2b mob/backend/portal_b2b_api
 
 # Execute MR creation
 php gitlab.php tasks/create_task_glpi-654321_mrs_to_gmud_1234.txt
@@ -64,9 +64,9 @@ php gitlab.php tasks/create_task_glpi-654321_mrs_to_gmud_1234.txt
 
 | Script | Purpose | Output Example |
 |--------|---------|----------------|
-| `create_txt_for_gmud_branches.php` | Generate branch creation tasks | `create_gmud_1234_branches.txt` |
-| `create_txt_for_gmuds_mrs.php` | Create GMUD workflow MRs | `create_gmud_1234_mrs.txt` |
-| `create_txt_for_task_mrs_for_gmud.php` | Generate task-to-GMUD MRs | `create_task_glpi-654321_mrs_to_gmud_1234.txt` |
+| `gmud_branches_txt.php` | Generate branch creation tasks | `create_gmud_1234_branches.txt` |
+| `gmuds_mrs_txt.php` | Create GMUD workflow MRs | `create_gmud_1234_mrs.txt` |
+| `task_mrs_for_gmud_txt.php` | Generate task-to-GMUD MRs | `create_task_glpi-654321_mrs_to_gmud_1234.txt` |
 
 ## File Patterns
 
