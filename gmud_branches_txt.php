@@ -3,7 +3,7 @@
 require __DIR__ . '/src/header.php';
 
 if ($argc < 2) {
-    die("Usage: php create_txt_for_gmud_branches.php <gmud_number>\n");
+    die("Usage: php gmud_branches_txt.php <gmud_number>\n");
 }
 
 $gmudNumber = $argv[1];

@@ -2,7 +2,7 @@
 require __DIR__ . '/src/header.php';
 
 if ($argc < 3) {
-    die("Usage: php create_txt_for_task_mrs_for_gmud.php <task_id> <gmud_number> [repo1] [repo2...]\n");
+    die("Usage: php task_mrs_for_gmud_txt.php <task_id> <gmud_number> [repo1] [repo2...]\n");
 }
 
 $taskId = $argv[1];

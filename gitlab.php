@@ -5,7 +5,7 @@ use GitLabAutomation\GitLabHelper;
 use GuzzleHttp\Exception\RequestException;
 
 if ($argc < 2) {
-    die("Usage: php batch.php <tasks_file>\n");
+    die("Usage: php gitlab.php <tasks_file>\n");
 }
 
 $helper = new GitLabHelper();
